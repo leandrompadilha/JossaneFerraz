@@ -424,7 +424,8 @@ body {
     letter-spacing: normal;
     -webkit-text-size-adjust: 100%;
     color: #0e0e0e;
-    overflow-x: hidden
+    overflow-x: hidden;
+    background: #f7f7f7;
 }
 
 body {
@@ -3269,9 +3270,16 @@ footer#footer .copyright a svg {
     height: 46px
 }
 
+footer#footer .copyright {
+    display: flex;
+    flex-direction: column; /* Mantém os itens em coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    text-align: center; /* Garante que o texto fique centralizado */
+}
+
 footer#footer .copyright .copyright-text {
     color: #878a8f;
-    margin: 15px 0 0 56px
+    margin: 15px 0 0 0;
 }
 
 footer#footer .copyright .copyright-text .icon-heart svg {
@@ -6663,7 +6671,7 @@ section.home-portfolio.personal .list .list-item-portfolio>a {
 
     section.home-portfolio .list .list-item-portfolio {
         margin: 30px;
-        width: calc(50% - 60px)
+        width: calc(33.333333333% - 60px) /*Ítems por linha*/
     }
 
     section.home-portfolio .list .list-item-portfolio+.list-item-portfolio {
@@ -8210,11 +8218,13 @@ section.case-study-next-project>div .desc i {
     height: auto; /* Ajusta a altura conforme o conteúdo */
     width: 88%; /* Define uma largura menor para criar margens laterais maiores */
     max-width: 800px; /* Define um limite máximo para evitar que fique muito largo */
-    margin: 20px auto; /* Centraliza horizontalmente e mantém espaçamento vertical */
-    padding: 20px; /* Adiciona espaçamento interno para melhorar a legibilidade */
+    margin: 0px auto; /* Centraliza horizontalmente e mantém espaçamento vertical */
+    padding: 10px; /* Adiciona espaçamento interno para melhorar a legibilidade */
     text-align: justify;
+    font-size: 15px;
 }
 
 .main768 {
     margin-top: 43%;
 }
+
