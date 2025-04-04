@@ -27,22 +27,15 @@
             left: 0;
             z-index: 1000;
         }
-        header .logo img {
-            height: 35px;
-        }
-        nav {
-            background-color: transparent;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .logo img {
+            height: 30px;
+            transition: height 0.3s;
         }
         nav a {
             font-weight: 600;
             text-decoration: none;
             color: #2c3e50;
-            transition: color 0.3s;
+            transition: color 0.3s, font-size 0.3s;
             padding: 10px 15px;
             border-radius: 5px;
         }
@@ -106,6 +99,13 @@
             .gallery {
                 grid-template-columns: 1fr;
             }
+            .logo img {
+                height: 20px;
+            }
+            nav a {
+                font-size: 14px;
+                padding: 5px 10px;
+            }
         }
     </style>
 </head>
@@ -137,6 +137,7 @@
             <figure><img src="../images/perfil/04.jpg" alt="Foto 4"></figure>
             <figure><img src="../images/perfil/05.jpg" alt="Foto 5"></figure>
             <figure><img src="../images/perfil/06.jpg" alt="Foto 6"></figure>
+            <figure><img src="../images/perfil/07.jpg" alt="Foto 7"></figure>
         </div>
     </div>
 
@@ -144,19 +145,73 @@
         <img id="modalImg" src="" alt="Imagem Ampliada">
     </div>
 
-    <footer>
+    <footer style="background-color: #fcfcfc; color: #2d3436; padding: 10px; text-align: center; font-size: 14px; display: flex; justify-content: center; align-items: center; height: 60px;">
         <p>&copy; 2025 Jossane Ferraz. Todos os direitos reservados.</p>
     </footer>
 
     <script>
-        document.querySelectorAll('.gallery figure img').forEach(img => {
-            img.addEventListener('click', function() {
-                document.getElementById('modalImg').src = this.src;
-                document.getElementById('imageModal').classList.add('active');
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('.gallery figure img');
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+
+            let currentIndex = 0;
+
+            function openModal(index) {
+                currentIndex = index;
+                modalImg.src = images[currentIndex].src;
+                modal.classList.add('active');
+            }
+
+            function closeModal() {
+                modal.classList.remove('active');
+            }
+
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % images.length;
+                modalImg.src = images[currentIndex].src;
+            }
+
+            function prevImage() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                modalImg.src = images[currentIndex].src;
+            }
+
+            // Abre o modal ao clicar em uma imagem
+            images.forEach((img, index) => {
+                img.addEventListener('click', function () {
+                    openModal(index);
+                });
             });
-        });
-        document.getElementById('imageModal').addEventListener('click', function() {
-            this.classList.remove('active');
+
+            // Fecha o modal ao clicar fora da imagem
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModal();
+                } else {
+                    const clickX = event.clientX;
+                    const screenWidth = window.innerWidth;
+
+                    if (clickX > screenWidth / 2) {
+                        nextImage(); // Canto direito → próxima imagem
+                    } else {
+                        prevImage(); // Canto esquerdo → imagem anterior
+                    }
+                }
+            });
+
+            // Navegação com o teclado
+            document.addEventListener('keydown', function (event) {
+                if (modal.classList.contains('active')) {
+                    if (event.key === 'ArrowRight') {
+                        nextImage(); // Seta para a direita → próxima imagem
+                    } else if (event.key === 'ArrowLeft') {
+                        prevImage(); // Seta para a esquerda → imagem anterior
+                    } else if (event.key === 'Escape') {
+                        closeModal(); // Tecla Esc → fecha o modal
+                    }
+                }
+            });
         });
     </script>
 </body>
