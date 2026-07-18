@@ -61,6 +61,16 @@ header#header .header-links a:hover::after { transform: scaleX(1); }
 }
 
 /* --------------------------------------------------------------------------
+   1b. Cards do portfólio
+   No desktop o título aparece no hover (overlay do template); o bloco fixo
+   de título fica visível apenas no mobile, onde não existe hover.
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+    section.home-portfolio .list .list-item-portfolio > a strong.regular { display: none; }
+}
+
+/* --------------------------------------------------------------------------
    2. Logo dentro do overlay (classe própria para não ser interceptada
       pela navegação SPA do template, que quebraria em a.logo)
    -------------------------------------------------------------------------- */
