@@ -1,63 +1,29 @@
 /* ==========================================================================
    Jossane Ferraz — complementos da home (não altera o build.min.css)
-   1. Links de navegação visíveis no header (desktop)
-   2. Botão hambúrguer (mobile) — abre o overlay #nav do template
+   1. Navegação por hambúrguer (desktop e mobile) — abre o overlay #nav
+   2. Logo do overlay
    3. Itens do menu overlay (#nav-overlay-content .menu-items)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. Links no header (desktop)
+   1. Navegação: hambúrguer em todos os tamanhos
+   Desktop mostra o rótulo "Menu" ao lado do ícone; no mobile fica só o ícone.
    -------------------------------------------------------------------------- */
 
-header#header .header-links {
-    position: absolute;
-    top: 0;
-    right: 24px;
-    height: 85px;
-    display: flex;
-    align-items: center;
-    gap: 28px;
-    z-index: 1;
-}
-
-header#header .header-links a {
-    font-size: .8125rem;
-    font-weight: 800;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: #0e0e0e;
-    text-decoration: none;
-    border: 0 none;
-    padding: 6px 0;
-    position: relative;
-    white-space: nowrap;
-    transition: color .2s linear;
-}
-
-header#header .header-links a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #ff5959;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .25s cubic-bezier(.3, 0, .5, 1);
-}
-
-header#header .header-links a:hover::after { transform: scaleX(1); }
-
-/* Desktop: links visíveis, hambúrguer escondido */
-@media (min-width: 980px) {
-    header#header .menu { display: none; }
-}
-
-/* Mobile/tablet: hambúrguer visível, links escondidos */
 @media (max-width: 979px) {
-    header#header .header-links { display: none; }
     header#header .menu > span { display: none; }
+}
+
+/* --------------------------------------------------------------------------
+   1a. Splash / fundo do menu no mobile
+   As fotos de loader são paisagem (1920x1200); com object-fit:cover num
+   celular em pé o corte vira um zoom enorme. Em retrato, mostra a foto
+   inteira sobre o fundo escuro.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) and (orientation: portrait) {
+    .loader-background { background: #0e0e0e; }
+    .loader-background img { object-fit: contain; }
 }
 
 /* --------------------------------------------------------------------------
