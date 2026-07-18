@@ -3272,7 +3272,7 @@ footer#footer .copyright a svg {
 
 footer#footer .copyright {
     display: flex;
-    flex-direction: column; /* Mantém os itens em coluna */
+    flex-direction: column; /* MantÃ©m os itens em coluna */
     align-items: center; /* Centraliza os elementos horizontalmente */
     text-align: center; /* Garante que o texto fique centralizado */
 }
@@ -6012,7 +6012,7 @@ section.home-top .main-copy {
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width:768px) and (min-height:620px),(min-resolution:192dpi) and (min-width:768px) and (min-height:620px) {
     section.home-top .bg-image {
-        background-image:url(../assets/images/bg_home_@2x.png)
+        background-image:url(../assets/images/bg_home2.png)
     }
 }
 
@@ -6104,7 +6104,7 @@ section.home-top .main-copy {
 
 @media (min-height: 1120px) {
     section.home-top .bg-image {
-        background-image:url(../assets/images/bg_home_@2x.png)
+        background-image:url(../assets/images/bg_home2.png)
     }
 }
 
@@ -6671,7 +6671,7 @@ section.home-portfolio.personal .list .list-item-portfolio>a {
 
     section.home-portfolio .list .list-item-portfolio {
         margin: 30px;
-        width: calc(33.333333333% - 60px) /*Ítems por linha*/
+        width: calc(33.333333333% - 60px) /*Ãtems por linha*/
     }
 
     section.home-portfolio .list .list-item-portfolio+.list-item-portfolio {
@@ -8215,11 +8215,11 @@ section.case-study-next-project>div .desc i {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: auto; /* Ajusta a altura conforme o conteúdo */
+    height: auto; /* Ajusta a altura conforme o conteÃºdo */
     width: 88%; /* Define uma largura menor para criar margens laterais maiores */
-    max-width: 800px; /* Define um limite máximo para evitar que fique muito largo */
-    margin: 0px auto; /* Centraliza horizontalmente e mantém espaçamento vertical */
-    padding: 10px; /* Adiciona espaçamento interno para melhorar a legibilidade */
+    max-width: 800px; /* Define um limite mÃ¡ximo para evitar que fique muito largo */
+    margin: 0px auto; /* Centraliza horizontalmente e mantÃ©m espaÃ§amento vertical */
+    padding: 10px; /* Adiciona espaÃ§amento interno para melhorar a legibilidade */
     text-align: justify;
     font-size: 15px;
 }

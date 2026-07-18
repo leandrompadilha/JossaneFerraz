@@ -1,60 +1,33 @@
 <!DOCTYPE html>
-<html class="home">
+<html lang="pt-BR" class="home">
 
     <!--* HEAD -->
     <head>
         <title>Jossane Ferraz</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <base href="/">
         <meta name="author" content="Jossane Ferraz">
-        <meta name="keywords" content="">
-        <meta name="description" content="">
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#212733">
-        <meta name="theme-color" content="#ffffff">
+        <meta name="keywords" content="Jossane Ferraz, teatro, dança contemporânea, circo, direção teatral, Entre 2 Produções, Curitiba">
+        <meta name="description" content="Portfólio de Jossane Ferraz, artista do movimento e diretora da Entre 2 Produções: teatro, dança contemporânea, circo e criações híbridas.">
+        <meta name="theme-color" content="#f7f7f7">
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Jossane Ferraz">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
-        <meta property="og:title" content="Jossane Ferraz">
-        <meta property="og:description" content="">
-        <link rel="stylesheet" href="/assets/fonts/webfonts.css?v=2.5.18">
-        <link rel="stylesheet" href="/css/build.min.css?v=2.5.18">
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112464574-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', 'UA-112464574-1');
-        </script>
+        <meta property="og:image" content="/images/projetos/subterranea/capa.jpg">
+        <meta property="og:title" content="Jossane Ferraz — Diretora e Artista do Movimento">
+        <meta property="og:description" content="Teatro, dança contemporânea, circo e criações híbridas que promovem o protagonismo feminino e a inclusão.">
+        <link rel="stylesheet" href="/assets/fonts/webfonts.css?v=2.5.19">
+        <link rel="stylesheet" href="/css/build.min.css?v=2.5.19">
+        <link rel="stylesheet" href="/css/home.css?v=2.5.19">
+        <link rel="icon" href="/assets/images/logo2.png">
     </head>
 
     <!--* BODY -->
     <body>
-        <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaOnloadCallback&render=explicit" async defer></script>
         <script>
-            var recaptchaObject = null;
-            var recaptchaOnloadCallback = function() {
-                if ($('#contact-recaptcha').length > 0 && typeof grecaptcha !== "undefined") {
-                    if ($('#contact-recaptcha iframe').length < 1) {
-                        recaptchaObject = grecaptcha.render('contact-recaptcha', {
-                            'sitekey': '6LdtzscUAAAAAPSIrHt9dDtkTmiEdtwREsl9w4NA',
-                            'callback': function(response) {
-                                $('#contact-recaptcha > div iframe').removeAttr('style');
-                            }
-                        });
-                    } else {
-                        grecaptcha.reset(recaptchaObject);
-                    }
-
-                }
-
-            };
+            // Stub: build.min.js chama esta função ao fechar a splash.
+            // O reCAPTCHA foi removido (não há formulário), mas a função precisa existir.
+            var recaptchaOnloadCallback = function() {};
         </script>
         <div class="svg-icons-wrapper">
         </div>
@@ -64,7 +37,7 @@
             </div>
         </div>
         <nav id="nav">
-            <a href="/" class="logo" data-page="home">
+            <a href="/" class="overlay-logo" data-page="home">
                 <img src="assets/images/logo2.png" alt="Logo" style="height: 28px; width: auto;"/>
             </a>
             <a href="#" class="close">
@@ -89,6 +62,20 @@
                 </p>
             </footer>
         </nav>
+        <div id="nav-overlay-content">
+            <div class="content">
+                <h5>Navegação</h5>
+                <div class="menu-items">
+                    <a href="/" data-page="home">Início</a>
+                    <a href="#portfolio" class="scroll-to" data-page="proj">Projetos</a>
+                    <a href="#oficinas" class="scroll-to" data-page="proj">Oficinas</a>
+                    <a href="#extras" class="scroll-to" data-page="insta">Extras</a>
+                    <a href="html/about.html" data-page="about">Sobre</a>
+                    <a href="html/entre2producoes.html" data-page="entre">Entre 2 Produções</a>
+                    <a href="#footer" class="scroll-to" data-page="contact">Contato</a>
+                </div>
+            </div>
+        </div>
         <div id="nav-scroll"></div>
         <div class="loader on first-loading">
             <div class="loader-preloader">
@@ -96,13 +83,30 @@
             </div>
 
             <div class="text">
-                <h5>Bem Vindo</h5>
+                <h5>Bem-vindo</h5>
                 <h1 class="large">Aguarde um instante...</h1>
             </div>
         </div>
         <header id="header">
             <a href="/" class="logo" data-page="home">
-                <img src="assets/images/logo.png" alt="Logo" style="height: 28px; width: auto;"/>
+                <img src="assets/images/logo.png" alt="Jossane Ferraz" style="height: 28px; width: auto;"/>
+            </a>
+            <a href="#" class="menu" aria-label="Abrir menu">
+                <span>Menu</span>
+                <b>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </b>
+            </a>
+            <nav class="header-links" aria-label="Navegação principal">
+                <a href="#portfolio" class="scroll-to">Projetos</a>
+                <a href="#oficinas" class="scroll-to">Oficinas</a>
+                <a href="#extras" class="scroll-to">Extras</a>
+                <a href="html/about.html">Sobre</a>
+                <a href="html/entre2producoes.html">Entre 2 Produções</a>
+                <a href="#footer" class="scroll-to">Contato</a>
+            </nav>
         </header>
         <!-- <a href="mailto:entre2prod@gmail.com" class="contact-link internal">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" space="preserve">
@@ -122,9 +126,9 @@
 
             <!--? HOME -->
             <section class="home-top">
-                <img src="assets/images/bg_home_2.png" alt="diretora." class="bg-title" id="about">
+                <img src="assets/images/bg_home_2.png" alt="" class="bg-title" id="about">
                 <div class="bg-image">
-                    <img srcset="assets/images/bg_home.png 1x, assets/images/bg_home_@2x.png 2x">
+                    <img src="assets/images/bg_home2.png" alt="">
                 </div>
                 <div class="wrapper">
                     <div class="row">
@@ -173,6 +177,13 @@
                                 <div class="lazyload-wrapper" style="padding-bottom:125.07462686567163%">
                                     <img alt="SUBTERRANEA" class="lazy" data-srcset="images/projetos/subterranea/capa.jpg 480w, images/projetos/subterranea/capa.jpg 670w" data-src="images/projetos/subterranea/capa.jpg">
                                 </div>
+                                <strong class="regular dark-bg">
+                                    <span class="h5">2025</span>
+                                    <span class="h2 with-badge">Subterrânea</span>
+                                    <span class="more with-icon">
+                                        <p>Conheça →</p>
+                                    </span>
+                                </strong>
                                 <strong class="action">
                                     <span class="h5">2025</span>
                                     <span class="h2 with-badge">Subterrânea</span>
@@ -200,6 +211,13 @@
                                 <div class="lazyload-wrapper" style="padding-bottom:125.07462686567163%">
                                     <img alt="Édipo" class="lazy" data-srcset="/images/projetos/edipo/capa.jpg 480w, /images/projetos/edipo/capa.jpg 670w" data-src="/images/projetos/edipo/capa.jpg">
                                 </div>
+                                <strong class="regular dark-bg">
+                                    <span class="h5">2024</span>
+                                    <span class="h2">Édipo - Uma Ópera Rap</span>
+                                    <span class="more with-icon">
+                                        <p>Conheça →</p>
+                                    </span>
+                                </strong>
                                 <strong class="action">
                                     <span class="h5">2024</span>
                                     <span class="h2">Édipo - Uma Ópera Rap</span>
@@ -223,6 +241,13 @@
                                 <div class="lazyload-wrapper" style="padding-bottom:125.07462686567163%">
                                     <img alt="Equilibrium" class="lazy" data-srcset="/images/projetos/equilibrium/capa.jpg 480w, images/projetos/equilibrium/capa.jpg 670w" data-src="images/projetos/equilibrium/capa.jpg">
                                 </div>
+                                <strong class="regular light-bg">
+                                    <span class="h5">2024</span>
+                                    <span class="h2">Equilibrium</span>
+                                    <span class="more with-icon">
+                                        <p>Conheça →</p>
+                                    </span>
+                                </strong>
                                 <strong class="action">
                                     <span class="h5">2024</span>
                                     <span class="h2">Equilibrium</span>
@@ -249,6 +274,13 @@
                                 <div class="lazyload-wrapper" style="padding-bottom:125.07462686567163%">
                                     <img alt="Keep On" class="lazy" data-srcset="/images/projetos/keep_on/capa.jpg 480w, /images/projetos/keep_on/capa.jpg 670w" data-src="/images/projetos/keep_on/capa.jpg">
                                 </div>
+                                <strong class="regular dark-bg">
+                                    <span class="h5">2023</span>
+                                    <span class="h2">KEEP ON</span>
+                                    <span class="more with-icon">
+                                        <p>Conheça →</p>
+                                    </span>
+                                </strong>
                                 <strong class="action">
                                     <span class="h5">2023</span>
                                     <span class="h2">KEEP ON</span>
@@ -272,6 +304,13 @@
                                 <div class="lazyload-wrapper" style="padding-bottom:125.07462686567163%">
                                     <img alt="Fonte Mágica" class="lazy" data-srcset="/images/projetos/fonte_magica/capa.jpg 480w, /images/projetos/fonte_magica/capa.jpg 670w" data-src="/images/projetos/fonte_magica/capa.jpg">
                                 </div>
+                                <strong class="regular dark-bg">
+                                    <span class="h5">2022 - 2025</span>
+                                    <span class="h2">FONTE MÁGICA</span>
+                                    <span class="more with-icon">
+                                        <p>Conheça →</p>
+                                    </span>
+                                </strong>
                                 <strong class="action">
                                     <span class="h5">2022 - 2025</span>
                                     <span class="h2">FONTE MÁGICA</span>
@@ -295,6 +334,13 @@
                                 <div class="lazyload-wrapper" style="padding-bottom:125.07462686567163%">
                                     <img alt="Amarelo Queimado" class="lazy" data-srcset="/images/projetos/amarelo_queimado/capa.jpg 480w, /images/projetos/amarelo_queimado/capa.jpg 670w" data-src="/images/projetos/amarelo_queimado/capa.jpg">
                                 </div>
+                                <strong class="regular dark-bg">
+                                    <span class="h5">2023</span>
+                                    <span class="h2">AMARELO QUEIMADO</span>
+                                    <span class="more with-icon">
+                                        <p>Conheça →</p>
+                                    </span>
+                                </strong>
                                 <strong class="action">
                                     <span class="h5">2023</span>
                                     <span class="h2">AMARELO QUEIMADO</span>
@@ -320,6 +366,13 @@
                                 <div class="lazyload-wrapper" style="padding-bottom:125.07462686567163%">
                                     <img alt="Mari e Brisa" class="lazy" data-srcset="/images/projetos/mariebrisa/capa.jpg 480w, /images/projetos/mariebrisa/capa.jpg 670w" data-src="/images/projetos/mariebrisa/capa.jpg">
                                 </div>
+                                <strong class="regular dark-bg">
+                                    <span class="h5">2013</span>
+                                    <span class="h2">As Aventuras de Mari e Brisa</span>
+                                    <span class="more with-icon">
+                                        <p>Conheça →</p>
+                                    </span>
+                                </strong>
                                 <strong class="action">
                                     <span class="h5">2013</span>
                                     <span class="h2">As Aventuras de Mari e Brisa</span>
@@ -341,7 +394,7 @@
             </section>
 
             <!--? OFICINAS -->
-            <section class="home-portfolio" id="portfolio">
+            <section class="home-portfolio" id="oficinas">
                 <div class="wrapper">
                     <div class="animate--me">
                         <h5>Selecione</h5>
@@ -356,6 +409,13 @@
                                 <div class="lazyload-wrapper" style="padding-bottom:125.07462686567163%">
                                     <img alt="OFICINA MARINGA" class="lazy" data-srcset="images/oficinas/oficina_mascaramento/capa.jpg 480w, images/oficinas/oficina_mascaramento/capa.jpg 670w" data-src="images/oficinas/oficina_mascaramento/capa.jpg">
                                 </div>
+                                <strong class="regular dark-bg">
+                                    <span class="h5">2025</span>
+                                    <span class="h2 with-badge">Oficina Mascaramentos</span>
+                                    <span class="more with-icon">
+                                        <p>Conheça →</p>
+                                    </span>
+                                </strong>
                                 <strong class="action">
                                     <span class="h5">2025</span>
                                     <span class="h2 with-badge">Oficina Mascaramentos</span>
@@ -379,7 +439,7 @@
             </section>
 
             <!--? OUTROS -->
-            <section class="home-portfolio" id="portfolio">
+            <section class="home-portfolio" id="extras">
                 <div class="wrapper">
                     <div class="animate--me">
                         <h5>Selecione</h5>
@@ -394,12 +454,25 @@
                                 <div class="lazyload-wrapper" style="padding-bottom:125.07462686567163%">
                                     <img alt="EXTRAS INCANTO" class="lazy" data-srcset="images/extras/Incanto/capa.jpg 480w, images/extras/Incanto/capa.jpg 670w" data-src="images/extras/Incanto/capa.jpg">
                                 </div>
+                                <strong class="regular dark-bg">
+                                    <span class="h5">2025</span>
+                                    <span class="h2 with-badge">Trupe Incanto</span>
+                                    <span class="more with-icon">
+                                        <p>Conheça →</p>
+                                    </span>
+                                </strong>
                                 <strong class="action">
                                     <span class="h5">2025</span>
-                                    <span class="h2 with-badge">Incanto</span>
+                                    <span class="h2 with-badge">Trupe Incanto</span>
                                     <span class="more with-icon">
                                         <p>
-                                            Jossane Ferraz é diretora da Trupe Incanto, uma companhia mirim de circo que promove as artes circenses para crianças e adolescentes em situação de vulnerabilidade social. Com sensibilidade e dedicação, ela transforma a Trupe em um espaço de aprendizado e expressão artística, incentivando o trabalho coletivo, a superação de desafios e a paixão pela arte.                                        </p>
+                                            Conheça →
+                                        </p>
+                                    </span>
+                                    <span class="desc">
+                                        <p>
+                                            Jossane Ferraz é diretora da Trupe Incanto, uma companhia mirim de circo que promove as artes circenses para crianças e adolescentes em situação de vulnerabilidade social. Com sensibilidade e dedicação, ela transforma a Trupe em um espaço de aprendizado e expressão artística, incentivando o trabalho coletivo, a superação de desafios e a paixão pela arte.
+                                        </p>
                                     </span>
                                 </strong>
                             </a>
@@ -411,23 +484,59 @@
                                 <div class="lazyload-wrapper" style="padding-bottom:125.07462686567163%">
                                     <img alt="EXTRAS FRANCA" class="lazy" data-srcset="images/extras/franca/capa.jpg 480w, images/extras/franca/capa.jpg 670w" data-src="images/extras/franca/capa.jpg">
                                 </div>
+                                <strong class="regular dark-bg">
+                                    <span class="h5">2023</span>
+                                    <span class="h2 with-badge">França</span>
+                                    <span class="more with-icon">
+                                        <p>Conheça →</p>
+                                    </span>
+                                </strong>
                                 <strong class="action">
                                     <span class="h5">2023</span>
                                     <span class="h2 with-badge">França</span>
                                     <span class="more with-icon">
                                         <p>
-                                            Jossane Ferraz é uma profissional apaixonada pelas artes cênicas, com uma visão diversificada enriquecida por sua experiência internacional na França. Durante sua estadia, assistiu a espetáculos renomados, participou de cursos especializados e interagiu com artistas de diversas culturas. Essa vivência ampliou seu olhar artístico, permitindo-lhe incorporar novas perspectivas e técnicas, refletindo em seu trabalho inovador, aberto à fusão de estilos e à experimentação.
+                                            Conheça →
                                         </p>
                                     </span>
-                                    <span  class="desc">
+                                    <span class="desc">
                                         <p>
-                                            TEXTO
+                                            Jossane Ferraz é uma profissional apaixonada pelas artes cênicas, com uma visão diversificada enriquecida por sua experiência internacional na França. Durante sua estadia, assistiu a espetáculos renomados, participou de cursos especializados e interagiu com artistas de diversas culturas. Essa vivência ampliou seu olhar artístico, permitindo-lhe incorporar novas perspectivas e técnicas, refletindo em seu trabalho inovador, aberto à fusão de estilos e à experimentação.
                                         </p>
                                     </span>
                                 </strong>
                             </a>
                         </div>
 
+                        <!--! AUDIOBOOK TERRA -->
+                        <div class="list-item-portfolio">
+                            <a href="html/extras/audiobook.html" class="new animate--me" style="background-color: #0f0f0f;" data-page="EXTRA_AUDIOBOOK">
+                                <div class="lazyload-wrapper" style="padding-bottom:125.07462686567163%">
+                                    <img alt="Audiobook TERRA" class="lazy" data-srcset="images/extras/audiobook/capa.jpg 480w, images/extras/audiobook/capa.jpg 670w" data-src="images/extras/audiobook/capa.jpg">
+                                </div>
+                                <strong class="regular dark-bg">
+                                    <span class="h5">Áudio</span>
+                                    <span class="h2 with-badge">Audiobook TERRA</span>
+                                    <span class="more with-icon">
+                                        <p>Ouça →</p>
+                                    </span>
+                                </strong>
+                                <strong class="action">
+                                    <span class="h5">Áudio</span>
+                                    <span class="h2 with-badge">Audiobook TERRA</span>
+                                    <span class="more with-icon">
+                                        <p>
+                                            Ouça →
+                                        </p>
+                                    </span>
+                                    <span class="desc">
+                                        <p>
+                                            TERRA AUDIOBOOK é criado a partir do texto TERRA, de Jossane Ferraz. O texto questiona o homem e seus espaços, o sentimento de não pertencimento e a orfandade em sentido amplo, evocando questões como os movimentos migratórios, o desenraizamento e a noção de fronteira: até que ponto elas são barreiras ou lugares de encontro?
+                                        </p>
+                                    </span>
+                                </strong>
+                            </a>
+                        </div>
 
                     </div>
                 </div>
@@ -498,9 +607,8 @@
                 }
             }
         </script>
-        <script src="/js/lib.min.js?v=2.5.18" type="text/javascript"></script>
-        <script src="//maps.googleapis.com/maps/api/js?v=3.30&key=AIzaSyBgLTZ9MTQ_4wjTVHgu3qrG7_dz61bYhRQ" type="text/javascript"></script>
-        <script src="/js/build.min.js?v=2.5.18" type="text/javascript"></script>
+        <script src="/js/lib.min.js?v=2.5.19" type="text/javascript"></script>
+        <script src="/js/build.min.js?v=2.5.19" type="text/javascript"></script>
         <div class="loader-background-preloader">
             <img src="assets/loader/loader-home.jpg" alt="" data-page="home" class="active">
             <img src="assets/loader/loader-about.jpg" alt="" data-page="about">
@@ -509,25 +617,23 @@
             <img src="assets/loader/loader-insta.jpg" alt="" data-page="insta">
             <img src="assets/loader/loader-proj.jpg" alt="" data-page="proj">
         </div>
-    </body>
 
-
-    <!--* FOOTER -->
-    <footer id="footer">
+        <!--* FOOTER -->
+        <footer id="footer">
         <div class="wrapper">
             <div class="row">
                 <div class="col-sm-6-6 col-md-12-12 col-smd-12-12 col-lg-4-12 contact">
                     <h3>
                         Informações de  <br>Contato
                     </h3>
-                    <p>Sinta-se à vontade para entrar em contato comigo a qualquer momento.</p>
+                    <p>Sinta-se à vontade para entrar em contato comigo.</p>
                     <ul class="contact-links">
-                        <script>
-                            document.write('<li>E: <a class="special" href="mailto:entre2prod@gmail.com">entre2prod@gmail.com</a></li><li>P: <span class="gray-darkest" content="noindex">+55-41-9-9921-0626</span></li>');
-                        </script>
-
+                        <li>E: <a class="special" href="mailto:entre2prod@gmail.com">entre2prod@gmail.com</a></li>
+                        <li>P: <a class="special" href="https://wa.me/5541999210626" target="_blank" rel="noopener">+55 41 9 9921-0626</a></li>
                         <li>
-                            <img src="images/qrcode/whatsapp.png" alt="QR Code WhatsApp" style="width: 100px; height: auto; margin-top: 10px;">
+                            <a href="https://wa.me/5541999210626" target="_blank" rel="noopener">
+                                <img src="images/qrcode/whatsapp.png" alt="QR Code do WhatsApp" style="width: 100px; height: auto; margin-top: 10px;">
+                            </a>
                         </li>
                     </ul>
 
@@ -539,7 +645,7 @@
                     </h3>
                     <ul class="project-links">
                         <li>
-                            <a href="html/projetos/subterranea.html" class="">Subterrânea</a>
+                            <a href="html/projetos/subterranea.html" class="special">Subterrânea</a>
                         </li>
                         <li>
                             <a href="html/projetos/edipo.html" class="special">Édipo</a>
@@ -582,12 +688,13 @@
                     </a>
 
                     <p class="small copyright-text">
-                        © 2025 Jossane Ferraz.<br>de
+                        © 2025 Jossane Ferraz.<br>
                         Curitiba, Brasil.
                     </p>
                 </div>
 
             </div>
         </div>
-    </footer>
+        </footer>
+    </body>
 </html>
