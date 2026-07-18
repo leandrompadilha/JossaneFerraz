@@ -136,6 +136,60 @@
     }
 
     /* ----------------------------------------------------------------------
+       Menu mobile (hambúrguer)
+       Botão e overlay são injetados aqui para não repetir markup nas páginas.
+       ---------------------------------------------------------------------- */
+
+    var header = document.querySelector('.site-header');
+    if (header) {
+        var logoImg = header.querySelector('.logo img');
+        var toggle = document.createElement('button');
+        toggle.type = 'button';
+        toggle.className = 'nav-toggle';
+        toggle.setAttribute('aria-label', 'Abrir menu');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.innerHTML = '<i></i><i></i><i></i>';
+        header.appendChild(toggle);
+
+        var menu = document.createElement('div');
+        menu.className = 'mobile-menu';
+        menu.innerHTML =
+            '<nav aria-label="Menu">' +
+                '<a href="/">Início</a>' +
+                '<a href="/#portfolio">Projetos</a>' +
+                '<a href="/#oficinas">Oficinas</a>' +
+                '<a href="/#extras">Extras</a>' +
+                '<a href="/html/about.html">Sobre</a>' +
+                '<a href="/html/entre2producoes.html">Entre 2 Produções</a>' +
+                '<a href="#contato">Contato</a>' +
+            '</nav>';
+        document.body.appendChild(menu);
+
+        var setMenu = function (open) {
+            menu.classList.toggle('open', open);
+            toggle.classList.toggle('open', open);
+            document.body.classList.toggle('menu-open', open);
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+            if (logoImg) {
+                logoImg.src = open ? '/assets/images/logo2.png' : '/assets/images/logo.png';
+            }
+        };
+
+        toggle.addEventListener('click', function () {
+            setMenu(!menu.classList.contains('open'));
+        });
+
+        menu.addEventListener('click', function (e) {
+            if (e.target === menu || e.target.closest('a')) { setMenu(false); }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && menu.classList.contains('open')) { setMenu(false); }
+        });
+    }
+
+    /* ----------------------------------------------------------------------
        Reveal on scroll
        ---------------------------------------------------------------------- */
 
