@@ -68,7 +68,12 @@ nav#nav.on {
     transition: height .35s cubic-bezier(.3, 0, .5, 1);
 }
 
-#nav-overlay-content.on .content { visibility: visible; }
+/* Revelação amarrada ao mesmo padrão de seletor que o template usa
+   (nav#nav.on + irmão adjacente), com !important para vencer o minificado */
+nav#nav.on + #nav-overlay-content .content,
+#nav-overlay-content.on .content {
+    visibility: visible !important;
+}
 
 #nav-overlay-content .content h5 {
     letter-spacing: .2em;
@@ -76,7 +81,8 @@ nav#nav.on {
     margin-bottom: 24px;
 }
 
-#nav-overlay-content.on .content h5 { opacity: 1; }
+nav#nav.on + #nav-overlay-content .content h5,
+#nav-overlay-content.on .content h5 { opacity: 1 !important; }
 
 #nav-overlay-content .menu-items {
     display: flex;
@@ -105,9 +111,10 @@ nav#nav.on {
 
 #nav-overlay-content .menu-items a:hover { color: #ff5959; }
 
+nav#nav.on + #nav-overlay-content .menu-items a,
 #nav-overlay-content.on .menu-items a {
-    opacity: 1;
-    transform: none;
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 #nav-overlay-content.on .menu-items a:nth-child(1) { transition-delay: .06s; }
